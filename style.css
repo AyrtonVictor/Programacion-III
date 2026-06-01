@@ -1,0 +1,253 @@
+body {
+    font-family: 'Courier New', Courier, monospace;
+    background-color: #0a0a0c;
+    background-image: url('textura_background.png');
+    background-repeat: repeat;
+    background-attachment: fixed;
+
+
+
+    color: #d1d1d6;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+::selection {
+    background: #00ff66;
+    color: #000;
+}
+
+header {
+    background-color: rgba(20, 20, 25, 0.9);
+    border-bottom: 3px double #e63946;
+    padding: 30px 20px;
+    text-align: center;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+header h1 {
+    color: #e63946;
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin: 0 0 10px 0;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+header p {
+    color: #8a8a93;
+    font-style: italic;
+    margin: 0;
+}
+
+nav {
+    background-color: #1a1a24 !important;
+    border-bottom: 2px solid #2a2a35;
+    position: center;
+    top: 30;
+    z-index: 1000;
+}
+
+nav ul {
+    list-style: none;
+    padding: center;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+nav ul li a {
+    display: block;
+    padding: 15px 20px;
+    color: #00ff66;
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: #e63946;
+    color: #fff;
+}
+
+main {
+    max-width: 1000px;
+    margin: 30px auto;
+    padding: 0 20px;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 30px;
+}
+
+@media (min-width: 768px) {
+    main {
+        grid-template-columns: 2fr 1fr;
+    }
+
+    #historia {
+        grid-column: 1;
+    }
+
+    aside {
+        grid-column: 2;
+    }
+
+    #evidencia {
+        grid-column: 1 / span 2;
+    }
+
+    #comunidad {
+        grid-column: 1 / span 2;
+    }
+
+    #formulario {
+        grid-column: 1 / span 2;
+    }
+}
+
+article,
+section,
+aside {
+    background-color: rgba(20, 20, 25, 0.85);
+    border: 1px solid #2a2a35;
+    padding: 25px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.7);
+}
+
+h2 {
+    color: #e63946;
+    border-bottom: 1px solid #e63946;
+    padding-bottom: 5px;
+    text-transform: uppercase;
+    margin-top: 0;
+}
+
+h3 {
+    color: #00ff66;
+    margin-top: 25px;
+}
+
+a {
+    color: #00ff66;
+    transition: color 0.2s ease;
+}
+
+a:hover {
+    color: #fff;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    border: 2px solid #2a2a35;
+    filter: grayscale(30%) contrast(110%);
+    margin: 10px 0;
+    background-color: #000;
+}
+
+iframe {
+    border: 2px solid #e63946;
+    max-width: 100%;
+    display: block;
+    margin: 20px 0;
+    box-shadow: 0 0 15px rgba(230, 57, 70, 0.3);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    background-color: #0d0d11;
+    font-size: 0.9rem;
+}
+
+table,
+th,
+td {
+    border: 1px solid #2a2a35 !important;
+    /* Forzamos para combinar con el border=1 del HTML */
+}
+
+th {
+    background-color: #e63946;
+    color: #fff;
+    text-transform: uppercase;
+    padding: 10px;
+}
+
+td {
+    padding: 10px;
+    color: #d1d1d6;
+}
+
+tr:nth-child(even) {
+    background-color: #141419;
+}
+
+form {
+    background-color: #0d0d11;
+    padding: 20px;
+    border: 1px dashed #e63946;
+    max-width: 500px;
+}
+
+label {
+    color: #00ff66;
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+input[type="text"],
+input[type="email"],
+select,
+textarea {
+    width: 100%;
+    padding: 10px;
+    background-color: #141419;
+    border: 1px solid #2a2a35;
+    color: #fff;
+    font-family: inherit;
+    box-sizing: border-box;
+    margin-top: 5px;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+select:focus,
+textarea:focus {
+    outline: none;
+    border-color: #00ff66;
+    box-shadow: 0 0 5px rgba(0, 255, 102, 0.5);
+}
+
+input[type="submit"] {
+    background-color: #e63946;
+    color: #fff;
+    border: none;
+    padding: 12px 25px;
+    font-family: inherit;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background 0.2s ease;
+    margin-top: 10px;
+}
+
+input[type="submit"]:hover {
+    background-color: #b32430;
+    box-shadow: 0 0 10px rgba(230, 57, 70, 0.5);
+}
+
+footer {
+    text-align: center;
+    padding: 30px;
+    background-color: #0a0a0c;
+    border-top: 1px solid #2a2a35;
+    color: #5a5a65;
+    font-size: 0.8rem;
+}
