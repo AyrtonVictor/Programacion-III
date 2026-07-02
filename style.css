@@ -46,7 +46,7 @@ nav {
     background-color: #1a1a24 !important;
     border-bottom: 2px solid #2a2a35;
     position: center;
-    top: 30;
+    top: 0;
     z-index: 1000;
 }
 
@@ -170,7 +170,6 @@ table,
 th,
 td {
     border: 1px solid #2a2a35 !important;
-    /* Forzamos para combinar con el border=1 del HTML */
 }
 
 th {
